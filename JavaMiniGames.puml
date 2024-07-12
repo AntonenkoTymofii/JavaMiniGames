@@ -1,0 +1,31 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Menu {
+    snake: Snake
+    ticTacToe: TicTacToe
+    sudoku: Sudoku
+
+    Menu()
+    openSudoku()
+    openSnake()
+    openTicTacToe()
+}
+
+class Snake {
+    Snake()
+}
+
+class TicTacToe {
+    TicTacToe()
+}
+
+class Sudoku {
+    Sudoku()
+}
+
+Menu --* Sudoku
+Menu --* Snake
+Menu --* TicTacToe
+
+@enduml
