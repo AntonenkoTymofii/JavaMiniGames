@@ -16,7 +16,7 @@ public class Menu extends JFrame {
         });
         JButton ticTacToeButton = new JButton("Tic Tac Toe Game");
         ticTacToeButton.addActionListener(e -> {
-
+            new TicTacToeWindow().setVisible(true);
         });
         JButton sudokuButton = new JButton("Sudoku Game");
         sudokuButton.addActionListener(e -> {
