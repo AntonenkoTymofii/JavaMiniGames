@@ -1,6 +1,7 @@
 package org.example;
 
 import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -98,6 +99,7 @@ public class SnakeGame extends JPanel implements ActionListener {
     public void checkEat(){
         if(x[0] == appleX && y[0] == appleY){
             dots++;
+            timer.setDelay(timer.getDelay() - 2);
             createApple();
         }
     }
