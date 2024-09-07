@@ -9,7 +9,7 @@ public class SnakeWindow extends JDialog {
     SnakeWindow(){
         setTitle("Snake Game");
         setModal(true);
-        setBounds(600, 200, 640, 640);
+        setBounds(600, 200, 700, 700);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         snake = new SnakeGame(this);
         add(snake);
