@@ -13,18 +13,20 @@ public class Menu extends JFrame {
         JButton snakeButton = new JButton("Snake Game");
         snakeButton.addActionListener(e -> {
             new SnakeWindow().setVisible(true);
+            //TODO: Do tests for Snake
         });
         JButton ticTacToeButton = new JButton("Tic Tac Toe Game");
         ticTacToeButton.addActionListener(e -> {
             new TicTacToeWindow().setVisible(true);
+            //TODO: Do tests for TictacToe
         });
-        JButton sudokuButton = new JButton("Sudoku Game");
-        sudokuButton.addActionListener(e -> {
-
-        });
+//        JButton sudokuButton = new JButton("Sudoku Game");
+//        sudokuButton.addActionListener(e -> {
+//
+//        });
         setLayout(new GridLayout(3,1));
         add(snakeButton);
         add(ticTacToeButton);
-        add(sudokuButton);
+//        add(sudokuButton);
     }
 }
