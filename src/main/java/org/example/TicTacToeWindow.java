@@ -14,11 +14,6 @@ public class TicTacToeWindow extends JDialog implements ActionListener {
     private boolean gameOver = false;
     private boolean tie = false;
 
-//    private enum GameStatus{
-//        InGame,
-//        Win,
-//        Tie
-//    }
 
     TicTacToeWindow() {
         setTitle("TicTacToe");
@@ -75,13 +70,13 @@ public class TicTacToeWindow extends JDialog implements ActionListener {
                 buttons[1][1].getText().equals(buttons[2][0].getText()) &&
                 !buttons[0][2].getText().isEmpty()) {
             gameOver = true;
+        } else {
+            tie = true;
         }
 
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 if(buttons[i][j].getText().isEmpty()){
-                    tie = true;
-                }else {
                     tie = false;
                 }
             }
@@ -89,10 +84,11 @@ public class TicTacToeWindow extends JDialog implements ActionListener {
 
         if (gameOver) {
             JOptionPane.showMessageDialog(this, "Player " + currentPlayer + " win!");
+            tie = false;
             resetBoard();
         }
 
-        if (!tie) {
+        if (tie) {
             JOptionPane.showMessageDialog(this, "TIE!");
             resetBoard();
         }
