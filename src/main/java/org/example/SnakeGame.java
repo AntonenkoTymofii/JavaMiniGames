@@ -54,9 +54,9 @@ public class SnakeGame extends JPanel implements ActionListener {
     }
 
     public void loadImage(){
-        ImageIcon imageApple = new ImageIcon("D:\\JavaMiniGames\\apple.png");
+        ImageIcon imageApple = new ImageIcon("src/main/resources/apple.png");
         apple = imageApple.getImage();
-        ImageIcon imageDot = new ImageIcon("D:\\JavaMiniGames\\dot.png");
+        ImageIcon imageDot = new ImageIcon("src/main/resources/dot.png");
         dot = imageDot.getImage();
     }
 
